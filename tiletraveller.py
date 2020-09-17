@@ -7,3 +7,80 @@
 
 
 
+
+def directions(x):
+    if x==1.1 or 2.1 or 3.1:
+        print('You can travel (N)orth')
+    elif x==2.2 or 3.3:
+        print('You can travel (S)outh or (W)est')
+    elif x==1.2:
+        print('You can travel (N)orth, (E)ast or (S)outh')
+    elif x==3.2:
+        print('You can travel (N)orth or (S)outh')
+    elif x==1.3:
+        print('You can travel (E)ast or (S)outh')
+    elif x==2.3:
+        print('You can travel (E)ast or (S)outh')
+
+
+def valid_direction(x,direction):
+    if x==1.1 or 2.1 or 3.1:
+        if direction!="N":
+            return False
+        else:
+            return True
+    elif x==2.2 or 3.3:
+        if direction!="S" or "W":
+            return False
+        else: 
+            return True
+    elif x==1.2:
+        if direction!="N" or "E" or "S":
+            return False
+        else:
+            return True
+    elif x==3.2:
+        if direction!="N" or "S":
+            return False
+        else:
+            return True
+    elif x==1.3:
+        if direction!="E" or "S":
+            return False
+        else:
+            return True
+    elif x==2.3:
+        if direction!="E" or "S":
+            return False
+        else:
+            return True
+
+def move(x,direction):
+    if direction=="N":
+        x+=0.1
+    elif direction=="E":
+        x+=1
+    elif direction=="S":
+        x-=0.1
+    elif direction=="W":
+        x-=1
+    return round(x,2)
+
+x=1.1
+while True:
+    directions(x)
+    direction=(raw_input('Direction: ')).upper()
+    if x==3.1:
+        print('Victory!')
+        break
+    else:
+        if valid_direction(x,direction):
+            x=move(x,direction)
+        else:
+            print('Not a valid direction!')
+
+
+
+        
+
+
