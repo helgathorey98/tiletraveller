@@ -10,19 +10,19 @@
 
 def directions(x):
     if x==1.1 or x==2.1:
-        print('You can travel (N)orth.')
+        print('You can travel: (N)orth.')
     elif x==3.1:
         print('Victory!')
     elif x==2.2 or x== 3.3:
-        print('You can travel (S)outh or (W)est.')
+        print('You can travel: (S)outh or (W)est.')
     elif x==1.2:
-        print('You can travel (N)orth, (E)ast or (S)outh.')
+        print('You can travel: (N)orth or (E)ast or (S)outh.')
     elif x==3.2:
-        print('You can travel (N)orth or (S)outh.')
+        print('You can travel: (N)orth or (S)outh.')
     elif x==1.3:
-        print('You can travel (E)ast or (S)outh.')
+        print('You can travel: (E)ast or (S)outh.')
     elif x==2.3:
-        print('You can travel (E)ast or (W)est.')
+        print('You can travel: (E)ast or (W)est.')
 
 
 def valid_direction(x,direction):
